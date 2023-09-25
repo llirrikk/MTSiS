@@ -1,0 +1,21 @@
+enable
+conf t
+router isis
+net 49.0001.0000.0000.000b.00
+exit
+int se0/0/0
+ip address 192.100.1.20 255.255.255.0
+ip router isis
+no sh
+exit
+int se0/0/1
+ip address 10.10.10.20 255.255.255.0
+ip router isis
+no sh
+end
+terminal width 200
+show running-config
+show interfaces serial 0/0/0
+show interfaces serial 0/0/1
+
+
