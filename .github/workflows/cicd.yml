@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  test:
+  telnet-send:
     runs-on: self-hosted
     strategy:
       max-parallel: 4
